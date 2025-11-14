@@ -59,6 +59,7 @@
         <div class="grid md:grid-cols-2 gap-8">
 
           <!-- SOUNDCLOUD -->
+          <!-- Pour changer : récupère un nouveau code "Embed" sur SoundCloud et remplace juste l'URL dans src. -->
           <iframe
             class="w-full h-64 rounded-lg"
             scrolling="no"
@@ -67,7 +68,13 @@
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/minot-et-la-grenouille&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
           </iframe>
 
-          <!-- YOUTUBE (à remplacer par ton vrai embed) -->
+          <!-- YOUTUBE -->
+          <!--
+            IMPORTANT :
+            - Va sur la vidéo ou playlist YouTube que tu veux mettre.
+            - "Partager" → "Intégrer" → copie l'URL dans src="...".
+            - Remplace la valeur ci-dessous par cette URL.
+          -->
           <iframe
             class="w-full h-64 rounded-lg"
             src="https://www.youtube.com/embed/VIDEO_ID_A_REMPLACER"
@@ -107,44 +114,70 @@
       <!-- ========== DATES ========== -->
       <section id="dates">
         <h2 class="text-xl md:text-2xl font-semibold mb-4">Prochaines Dates</h2>
+        <!--
+          Pour ajouter une date :
+          - Duplique une ligne <li> et modifie le texte.
+        -->
         <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
           <li>5 décembre — Montréal, Bar La Récré</li>
           <li>31 décembre — Québec, Nouvel An (Tek Crew)</li>
+          <!-- <li>AJOUTE UNE NOUVELLE DATE ICI</li> -->
         </ul>
       </section>
 
       <!-- ========== GALERIE (CARROUSEL) ========== -->
       <section id="gallery">
-        <h2 class="text-xl md:text-2xl font-semibold mb-4">Galerie</h2>
-        <p class="text-gray-300 text-sm md:text-base mb-4">
-          Instantanés live, fumée, machines et cerveaux en surchauffe.
-        </p>
+  <h2 class="text-xl font-semibold mb-4">Galerie</h2>
 
-        <!--
-          Pour ajouter une image :
-          - Mets le fichier dans /images/
-          - Duplique un bloc <div class="swiper-slide"> et change le src + alt.
-        -->
-        <div class="swiper mySwiper rounded-xl overflow-hidden">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="/images/gallery-1.png"
-                   alt="Minot &amp; La Grenouille en live (couleur)"
-                   class="w-full h-80 object-cover" />
-            </div>
-            <div class="swiper-slide">
-              <img src="/images/gallery-2.png"
-                   alt="Minot &amp; La Grenouille en live (noir &amp; blanc)"
-                   class="w-full h-80 object-cover" />
-            </div>
-          </div>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-          <!-- Pagination + flèches -->
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </section>
+  <!-- Carousel container -->
+  <div class="swiper mySwiper rounded-xl overflow-hidden">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="/images/gallery-1.png" 
+             alt="Minot & La Grenouille - Live couleur" 
+             class="w-full h-80 object-cover" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/images/gallery-2.png" 
+             alt="Minot & La Grenouille - Live noir et blanc" 
+             class="w-full h-80 object-cover" />
+      </div>
+
+    </div>
+
+    <!-- Pagination + navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Init script -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</section>
 
       <!-- ========== BOOKING ========== -->
       <section id="booking">
@@ -164,6 +197,7 @@
         <p class="text-sm md:text-base mb-2">
           Dossier complet (bio, photos HD, fiche technique, contacts).
         </p>
+        <!-- Ajuste le href si ton presskit change de nom/emplacement -->
         <a href="/presskit.pdf" class="text-blue-400 underline text-sm md:text-base">
           Télécharger le Press Kit (PDF)
         </a>
