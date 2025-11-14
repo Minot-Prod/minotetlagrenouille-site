@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minot & La Grenouille — Site Officiel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-black text-white font-sans">
+  <div class="min-h-screen flex flex-col justify-between">
+    <header class="p-6 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="/assets/logo-minot.png" alt="Logo Minot" class="h-12 w-12" />
+        <div>
+          <h1 class="text-2xl font-bold">Minot & La Grenouille</h1>
+          <p class="text-sm italic">Étrange, organique, électro, vivant.</p>
+        </div>
+      </div>
+      <nav class="space-x-4">
+        <a href="#bio" class="hover:underline">Bio</a>
+        <a href="#dates" class="hover:underline">Dates</a>
+        <a href="#gallery" class="hover:underline">Galerie</a>
+        <a href="#booking" class="hover:underline">Booking</a>
+        <a href="#press" class="hover:underline">Press Kit</a>
+        <a href="#socials" class="hover:underline">Réseaux</a>
+      </nav>
+    </header>
+
+    <main class="flex-grow px-6 space-y-10">
+      <section>
+        <h2 class="text-xl font-semibold mb-4">Écouter & Voir</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <iframe class="w-full h-48" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/minot-et-la-grenouille&color=%23ff5500&inverse=false&auto_play=false&show_user=true">
+          </iframe>
+          <iframe class="w-full h-48" src="https://www.youtube.com/embed/videoseries?list=PLxxxxxxx"
+            title="YouTube video playlist" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section id="bio">
+        <h2 class="text-xl font-semibold mb-4">Bio</h2>
+        <p class="text-gray-300 max-w-2xl leading-relaxed">
+          Minot &amp; La Grenouille est un duo live machine...
+        </p>
+      </section>
+
+      <section id="dates">
+        <h2 class="text-xl font-semibold mb-4">Prochaines Dates</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>01 Décembre – Marseille, Le Molotov</li>
+          <li>12 Janvier – Paris, Le Hasard Ludique</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2 class="text-xl font-semibold mb-4">Galerie</h2>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <img src="/images/gallery-1.jpg" class="w-full h-48 object-cover rounded-lg" />
+        </div>
+      </section>
+
+      <section id="booking">
+        <h2 class="text-xl font-semibold mb-4">Booking</h2>
+        <p>Contact pro : <a href="mailto:booking@minotetlagrenouille.fr" class="underline">booking@minotetlagrenouille.fr</a></p>
+      </section>
+
+      <section id="press">
+        <h2 class="text-xl font-semibold mb-4">Kit de Presse</h2>
+        <a href="/presskit.pdf" class="text-blue-400 underline">Télécharger le Press Kit</a>
+      </section>
+
+      <section id="socials">
+        <h2 class="text-xl font-semibold mb-4">Réseaux Sociaux</h2>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://instagram.com/minot_et_la_grenouille" class="underline">Instagram</a>
+          <a href="https://soundcloud.com/minot-et-la-grenouille" class="underline">SoundCloud</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-6 text-center text-sm text-gray-400">
+      © 2025 Minot & La Grenouille.
+    </footer>
+  </div>
+</body>
+</html>
