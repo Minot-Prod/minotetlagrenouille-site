@@ -126,11 +126,59 @@
       </section>
 
       <!-- ========== GALERIE (CARROUSEL) ========== -->
-      <section id="gallery">
-        <h2 class="text-xl md:text-2xl font-semibold mb-4">Galerie</h2>
-        <p class="text-gray-300 text-sm md:text-base mb-4">
-          Instantanés live, fumée, machines et cerveaux en surchauffe.
-        </p>
+   <section id="gallery">
+  <h2 class="text-xl font-semibold mb-4">Galerie</h2>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Carousel container -->
+  <div class="swiper mySwiper rounded-xl overflow-hidden">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="/images/gallery-1.png" 
+             alt="Minot & La Grenouille - Live couleur" 
+             class="w-full h-80 object-cover" />
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/images/gallery-2.png" 
+             alt="Minot & La Grenouille - Live noir et blanc" 
+             class="w-full h-80 object-cover" />
+      </div>
+
+    </div>
+
+    <!-- Pagination + navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Init script -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</section>
+
 
         <!--
           Pour ajouter une image :
