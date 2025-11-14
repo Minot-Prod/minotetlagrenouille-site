@@ -25,30 +25,37 @@
   <div class="min-h-screen flex flex-col justify-between">
 
     <!-- =============== HEADER / NAVBAR =============== -->
-    <header class="p-6 flex justify-between items-center max-w-5xl mx-auto w-full">
-      <div class="flex items-center space-x-4">
-        <!-- LOGO : remplace le fichier /assets/logo-minot.png si tu veux changer le visuel -->
-        <img src="/assets/logo-minot.png" alt="Logo Minot & La Grenouille" class="h-12 w-12 object-contain" />
-        <div>
-          <!-- TITRE PRINCIPAL -->
-          <h1 class="text-2xl md:text-3xl font-bold">Minot &amp; La Grenouille</h1>
-          <!-- SOUS-TITRE / SLOGAN -->
-          <p class="text-xs md:text-sm italic">
-            Plus on est de fous plus il y a de free, plus il y a de machines plus il y a de bruit !
-          </p>
-        </div>
-      </div>
+    <header class="p-6 flex flex-col items-center gap-4 max-w-5xl mx-auto w-full">
+  <!-- Bloc logo + titre centré -->
+  <div class="flex flex-col items-center text-center gap-3">
+    <!-- LOGO EN GROS -->
+    <img
+      src="/assets/logo-minot.png"
+      alt="Minot &amp; La Grenouille — Logo"
+      class="w-40 md:w-56 lg:w-64 h-auto"
+    />
 
-      <!-- MENU -->
-      <nav class="space-x-3 text-xs md:text-sm">
-        <a href="#bio" class="hover:underline">Bio</a>
-        <a href="#dates" class="hover:underline">Dates</a>
-        <a href="#gallery" class="hover:underline">Galerie</a>
-        <a href="#booking" class="hover:underline">Booking</a>
-        <a href="#press" class="hover:underline">Press Kit</a>
-        <a href="#socials" class="hover:underline">Réseaux</a>
-      </nav>
-    </header>
+    <div>
+      <h1 class="text-2xl md:text-3xl font-bold">
+        Minot &amp; La Grenouille
+      </h1>
+      <p class="text-xs md:text-sm italic">
+        Plus on est de fous plus il y a de free, plus il y a de machines plus il y a de bruit !
+      </p>
+    </div>
+  </div>
+
+  <!-- Menu sous le logo -->
+  <nav class="space-x-3 text-xs md:text-sm">
+    <a href="#bio" class="hover:underline">Bio</a>
+    <a href="#dates" class="hover:underline">Dates</a>
+    <a href="#gallery" class="hover:underline">Galerie</a>
+    <a href="#booking" class="hover:underline">Booking</a>
+    <a href="#press" class="hover:underline">Press Kit</a>
+    <a href="#socials" class="hover:underline">Réseaux</a>
+  </nav>
+</header>
+
 
     <!-- =============== CONTENU PRINCIPAL =============== -->
     <main class="flex-grow px-6 pb-10 space-y-10 max-w-5xl mx-auto w-full">
